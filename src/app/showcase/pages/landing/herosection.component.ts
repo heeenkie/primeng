@@ -21,6 +21,10 @@ import { AvatarModule } from 'primeng/avatar';
 import { TooltipModule } from 'primeng/tooltip';
 import { OverviewApp } from './samples/overviewapp.component';
 import { ChatApp } from './samples/chatapp.component';
+import { InboxApp } from './samples/inboxapp.component';
+import { CardsApp } from './samples/cardsapp.component';
+import { MoviesApp } from './samples/moviesapp.component';
+import { CustomersApp } from './samples/customersapp.component';
 
 @Component({
     selector: 'hero-section',
@@ -44,7 +48,11 @@ import { ChatApp } from './samples/chatapp.component';
         AvatarModule,
         TooltipModule,
         OverviewApp,
-        ChatApp
+        ChatApp,
+        InboxApp,
+        CardsApp,
+        MoviesApp,
+        CustomersApp
     ],
     template: `
         <section class="landing-hero py-20 px-8 lg:px-20">
@@ -201,12 +209,12 @@ import { ChatApp } from './samples/chatapp.component';
                         </div>
                     </div>
 
-                    <overview-app *ngIf="selectedSampleAppsSidebarNav === 'Overview'"/>
+                    <overview-app *ngIf="selectedSampleAppsSidebarNav === 'Overview'" />
                     <chat-app *ngIf="selectedSampleAppsSidebarNav === 'Chat'" />
-            <!-- <MoviesApp v-if="selectedSampleAppsSidebarNav === 'Movies'" />
-            <CardsApp v-if="selectedSampleAppsSidebarNav === 'Cards'" />
-            <InboxApp v-if="selectedSampleAppsSidebarNav === 'Inbox'" />
-            <CustomersApp v-if="selectedSampleAppsSidebarNav === 'Customers'" />   -->
+                    <inbox-app *ngIf="selectedSampleAppsSidebarNav === 'Inbox'" />
+                    <cards-app *ngIf="selectedSampleAppsSidebarNav === 'Cards'" />
+                    <movies-app *ngIf="selectedSampleAppsSidebarNav === 'Movies'" />
+                    <customers-app *ngIf="selectedSampleAppsSidebarNav === 'Customers'" />  
                 </div>
             </div>
         </section>

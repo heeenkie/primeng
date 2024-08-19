@@ -162,6 +162,8 @@ import { TagModule } from 'primeng/tag';
                             }"
                         >
                             <p-avatar
+                                [image]="message.image"
+                                [label]="!message.image ? message.capName : ''"
                                 [ngClass]="{
                                     'bg-primary-100 text-primary-950': !message.image
                                 }"
