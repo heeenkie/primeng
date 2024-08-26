@@ -41,8 +41,8 @@ import { AvatarStyle } from './style/avatarstyle';
     encapsulation: ViewEncapsulation.None,
     host: {
         '[class.p-avatar-circle]': 'shape === "circle" && !image',
-        '[class.p-avatar-lg]': 'size === "large"  && !image',
-        '[class.p-avatar-xl]': 'size === "xlarge"  && !image',
+        '[class.p-avatar-lg]': 'size === "large" && !image',
+        '[class.p-avatar-xl]': 'size === "xlarge" && !image',
         
     },
     providers: [AvatarStyle],
